@@ -1,0 +1,2 @@
+rootProject.name='Android Room Database Ex'
+include ':app'
