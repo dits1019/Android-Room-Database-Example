@@ -33,6 +33,13 @@ public class MainActivity extends AppCompatActivity {
         mUserDAO.setInsertUser(user);
 
 
+        List<User> userList = mUserDAO.getUserAll();
+        // 데이터 조히
+        for (int i = 0; i < userList.size(); i++) {
+            Log.d("Test", userList.get(i).getName() + "\n" +
+                    userList.get(i).getAge() + "\n" +
+                    userList.get(i).getPhoneNumber());
+        }
 
     }
 }
