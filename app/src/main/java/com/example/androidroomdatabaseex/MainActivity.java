@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
 //        user.setName("Test");
 //        user.setAge("20");
 //        user.setPhoneNumber("01012341234");
-
 //        mUserDAO.setInsertUser(user);
 
 
@@ -43,13 +42,18 @@ public class MainActivity extends AppCompatActivity {
 
 
         // 데이터 수정
-        User user2 = new User();   // 객체 인스턴스 생성
-        user2.setId(1);
-        user2.setName("Test_update");
-        user2.setAge("19");
-        user2.setPhoneNumber("01012345678");
-        mUserDAO.setUpdateUser(user2);
+//        User user2 = new User();   // 객체 인스턴스 생성
+//        user2.setId(1);
+//        user2.setName("Test_update");
+//        user2.setAge("19");
+//        user2.setPhoneNumber("01012345678");
+//        mUserDAO.setUpdateUser(user2);
 
+
+        // 데이터 삭제
+        User user3 = new User();
+        user3.setId(2);
+        mUserDAO.setDeleteUser(user3);
 
     }
 }
