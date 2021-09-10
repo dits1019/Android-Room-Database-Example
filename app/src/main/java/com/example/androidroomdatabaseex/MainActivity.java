@@ -25,12 +25,12 @@ public class MainActivity extends AppCompatActivity {
         mUserDAO = database.userDAO();   // 인터페이스 객체 할당
 
         // 데이터 삽입
-        User user = new User();   // 객체 인스턴스 생성
-        user.setName("Test");
-        user.setAge("20");
-        user.setPhoneNumber("01012341234");
+//        User user = new User();   // 객체 인스턴스 생성
+//        user.setName("Test");
+//        user.setAge("20");
+//        user.setPhoneNumber("01012341234");
 
-        mUserDAO.setInsertUser(user);
+//        mUserDAO.setInsertUser(user);
 
 
         List<User> userList = mUserDAO.getUserAll();
@@ -40,6 +40,16 @@ public class MainActivity extends AppCompatActivity {
                     userList.get(i).getAge() + "\n" +
                     userList.get(i).getPhoneNumber());
         }
+
+
+        // 데이터 수정
+        User user2 = new User();   // 객체 인스턴스 생성
+        user2.setId(1);
+        user2.setName("Test_update");
+        user2.setAge("19");
+        user2.setPhoneNumber("01012345678");
+        mUserDAO.setUpdateUser(user2);
+
 
     }
 }
